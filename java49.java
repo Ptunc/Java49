@@ -1,30 +1,19 @@
 package Java49;
 
+import java.util.Scanner;
+
 public class java49 {
-    static boolean isPalindrome(String str) {
-        int i = 0, j = str.length() - 1;
-        while (i < j) {
-            if (str.charAt(i) != str.charAt(j))
-                return false;
-            i++;
-            j--;
+    public static void FirstFactorial(int num) {
+        int top=1;
+        for(int i=num; i>=1; i--){
+          top*=i;
         }
-        return true;
-    }
-
-    static boolean isPalindrome2(String str) {
-        String reverse = "";
-        for (int i = str.length() - 1; i >= 0; i--) {
-            reverse += str.charAt(i);
-        }
-
-        if (str.equals(reverse))
-            return true;
-        else
-            return false;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(isPalindrome("abba"));
-    }
+        System.out.print(top);
+      }
+    
+      public static void main (String[] args) {  
+    
+        Scanner s = new Scanner(System.in);
+        FirstFactorial(s.nextInt()); 
+      }
 }
